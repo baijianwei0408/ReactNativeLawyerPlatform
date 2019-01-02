@@ -8,6 +8,8 @@ import {observer} from 'mobx-react';
 @observer
 export default class extends Component {
     render() {
-        return <Text>{homeStore.number}</Text>
+        return <Text onPress={()=>{
+            homeStore.addNumber()
+        }}>{homeStore.number}</Text>
     }
 }

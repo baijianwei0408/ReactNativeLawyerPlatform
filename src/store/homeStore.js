@@ -4,7 +4,7 @@ class HomeStore {
 
     @observable number = 1;
 
-    @computed addNumber() {
+    @action addNumber() {
         this.number += 1
     }
 
