@@ -1,6 +1,7 @@
 import {observable, action, computed} from 'mobx'
+import BaseStore from "../base/baseStore";
 
-class HomeStore {
+class HomeStore extends BaseStore{
 
     @observable number = 1;
 
