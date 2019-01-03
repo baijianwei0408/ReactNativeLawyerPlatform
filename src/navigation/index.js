@@ -5,7 +5,7 @@ import Second from '../pages/second'
 
 const AppNavigator = createStackNavigator(
     {
-        Home: {screen: Home, name: "首页"},
+        Home: {screen: Home},
         Second: {screen: Second}
     },
     {

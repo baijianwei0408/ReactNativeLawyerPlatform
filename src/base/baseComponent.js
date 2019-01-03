@@ -6,7 +6,7 @@ export default class BaseComponent extends Component {
 
     static navigationOptions = {
         // headerTitle instead of title
-        headerTitle: <Text>123</Text>,
+        header: null
     };
 
     constructor(props) {

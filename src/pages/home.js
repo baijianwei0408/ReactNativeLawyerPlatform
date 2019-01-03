@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Text} from 'react-native';
+import {View, Text} from 'react-native';
 import homeStore from '../store/homeStore';
 
 import {observer} from 'mobx-react';
@@ -14,17 +14,15 @@ export default class extends BaseComponent {
     //     headerTitle: <Text>123</Text>,
     // };
 
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
     render() {
-        return <Text style={{
-            width: '100%', textAlign: 'center'
-        }} onPress={() => {
-            homeStore.addNumber()
-            if (homeStore.number > 5)
-                this.props.navigation.navigate('Second')
-        }}>{homeStore.number}</Text>
+        return <View>
+            <Text style={{
+                width: '100%', textAlign: 'center', backgroundColor: "#334455"
+            }}>{homeStore.number}</Text>
+        </View>
     }
 }
