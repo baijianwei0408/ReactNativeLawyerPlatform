@@ -1,16 +1,27 @@
-import {createStackNavigator} from 'react-navigation';
+import {createStackNavigator, createBottomTabNavigator, createAppContainer} from 'react-navigation';
 
 import Home from '../pages/home'
 import Second from '../pages/second'
+import Third from '../pages/third'
 
-const AppNavigator = createStackNavigator(
-    {
-        Home: {screen: Home},
-        Second: {screen: Second}
+const HomeNavigation = createBottomTabNavigator({
+    Home: {screen: Home},
+    Second: {screen: Second}
+})
+HomeNavigation.navigationOptions = {
+    title: '首页',
+    headerTitleStyle: {
+        flex: 1, textAlign: 'center'
     },
-    {
-        initialRouteName: 'Home',
-    }
-);
+};
+
+const AppNavigator = createAppContainer(
+    createStackNavigator(
+        {
+            Home: {screen: HomeNavigation},
+            Third: {screen: Third},
+        }
+    )
+)
 
 export default AppNavigator

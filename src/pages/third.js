@@ -9,7 +9,7 @@ import BaseComponent from "../base/baseComponent";
 export default class extends BaseComponent {
 
     static navigationOptions = {
-        title: '第二页',
+        title: '第三页',
         headerTitleStyle: {
             flex: 1, textAlign: 'center'
         },
@@ -18,7 +18,7 @@ export default class extends BaseComponent {
 
     render() {
         return <Text onPress={() => {
-            this.props.navigation.navigate('Third')
-        }}>page 2</Text>
+            this.props.navigation.navigate('Second')
+        }}>page 33333</Text>
     }
 }

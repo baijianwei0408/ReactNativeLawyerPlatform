@@ -9,10 +9,14 @@ import BaseComponent from "../base/baseComponent";
 @observer
 export default class extends BaseComponent {
 
-    // static navigationOptions = {
-    //     // headerTitle instead of title
-    //     headerTitle: <Text>123</Text>,
-    // };
+
+    static navigationOptions = {
+        title: '首页',
+        headerTitleStyle: {
+            flex: 1, textAlign: 'center'
+        },
+    };
+
 
     constructor(props) {
         super(props)
@@ -22,6 +26,8 @@ export default class extends BaseComponent {
         return <View>
             <Text style={{
                 width: '100%', textAlign: 'center', backgroundColor: "#334455"
+            }} onPress={() => {
+                this.props.navigation.navigate("Third")
             }}>{homeStore.number}</Text>
         </View>
     }

@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 
-import {Text} from 'react-native'
-
 export default class BaseComponent extends Component {
 
     static navigationOptions = {
-        // headerTitle instead of title
-        header: null
+        // header: null
     };
 
     constructor(props) {
