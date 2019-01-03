@@ -4,19 +4,26 @@ import {Text} from 'react-native';
 import homeStore from '../store/homeStore';
 
 import {observer} from 'mobx-react';
+import BaseComponent from "../base/baseComponent";
 
 @observer
-export default class extends Component {
+export default class extends BaseComponent {
 
-    static navigationOptions = {
-        // headerTitle instead of title
-        headerTitle: <Text>123</Text>,
-    };
+    // static navigationOptions = {
+    //     // headerTitle instead of title
+    //     headerTitle: <Text>123</Text>,
+    // };
+
+    constructor(props){
+        super(props)
+    }
 
     render() {
-        return <Text onPress={()=>{
+        return <Text style={{
+            width: '100%', textAlign: 'center'
+        }} onPress={() => {
             homeStore.addNumber()
-            if(homeStore.number > 5)
+            if (homeStore.number > 5)
                 this.props.navigation.navigate('Second')
         }}>{homeStore.number}</Text>
     }

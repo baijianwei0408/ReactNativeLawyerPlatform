@@ -1,15 +1,15 @@
-import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
 
 import Home from '../pages/home'
 import Second from '../pages/second'
 
 const AppNavigator = createStackNavigator(
     {
-        Home: Home,
-        Second: Second
+        Home: {screen: Home, name: "首页"},
+        Second: {screen: Second}
     },
     {
-        initialRouteName: "Home"
+        initialRouteName: 'Home',
     }
 );
 
