@@ -13,7 +13,7 @@ export default class extends BaseComponent {
         headerTitleStyle: {
             flex: 1, textAlign: 'center'
         },
-        headerRight: <View/>
+        headerRight: <View><Text>rightttttttt</Text></View>
     };
 
     render() {
