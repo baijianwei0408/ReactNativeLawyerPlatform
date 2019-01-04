@@ -13,4 +13,16 @@ export default class BaseComponent extends Component {
         console.log(props.navigation.state.routeName)
     }
 
+    navTo(url, params = null) {
+        this.props.navigation.navigate(url, params)
+    }
+
+    navPush(url, params = null) {
+        this.props.navigation.push(url, params)
+    }
+
+    navBack() {
+        this.props.navigation.goBack()
+    }
+
 }
