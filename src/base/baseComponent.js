@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import api from '../api'
 
 export default class BaseComponent extends Component {
 
@@ -13,6 +14,10 @@ export default class BaseComponent extends Component {
         console.log(props.navigation.state.routeName)
     }
 
+    request() {
+        api.request()
+    }
+
     navTo(url, params = null) {
         this.props.navigation.navigate(url, params)
     }
@@ -23,6 +28,10 @@ export default class BaseComponent extends Component {
 
     navBack() {
         this.props.navigation.goBack()
+    }
+
+    getParams() {
+        return this.props.navigation.state.params || {}
     }
 
 }

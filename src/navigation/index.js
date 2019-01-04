@@ -1,14 +1,9 @@
 import {createStackNavigator, createBottomTabNavigator, createAppContainer} from 'react-navigation';
 
-import Home from '../pages/home'
-import Second from '../pages/second'
-import Third from '../pages/third'
-
-import navigations from './navigations'
+import {registerNavigation} from './navigations'
 
 
 function getNavigation() {
-    let registerNavigation = navigations.registerNavigation
     let navigator = {}
 
     for (let key in registerNavigation) {

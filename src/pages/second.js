@@ -17,6 +17,12 @@ export default class extends BaseComponent {
     };
 
     render() {
+        console.log(this.getParams())
+        console.log(this.getParams())
+        console.log(this.getParams())
+        console.log(this.getParams())
+        console.log(this.getParams())
+
         return <Text onPress={() => {
             this.props.navigation.navigate('third')
         }}>page 2</Text>

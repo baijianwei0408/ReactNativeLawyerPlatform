@@ -27,16 +27,16 @@ const registerNavigation = {
     },
 }
 
-const registerPage = {
+const pages = {
     home: 'home',
     second: 'second',
     third: 'third',
 }
 
 
-const navigation = {
-    registerNavigation,
-    registerPage
-}
+// const navigation = {
+//     registerNavigation,
+//     registerPage
+// }
 
-export default navigation
+export {registerNavigation, pages}
